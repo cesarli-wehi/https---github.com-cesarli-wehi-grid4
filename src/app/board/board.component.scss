@@ -1,0 +1,75 @@
+/* Style for the overall board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px); /* Define fixed size for columns */
+    grid-template-rows: repeat(6, 60px); /* Define fixed size for rows */
+    grid-gap: 2rem; /* Space between cells */
+    padding: 1rem;
+    background-color: #004d99; /* Dark blue for the board */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adding a subtle shadow */
+    margin: auto; /* Center the board */
+    justify-content: center; /* Center grid items horizontally */
+    align-content: center; /* Center grid items vertically */
+  }
+  
+  /* Style for each cell in the grid */
+  .cell {
+    background-color: #e6f3ff; /* Light blue for contrast */
+    border-radius: 50%; /* Circular cells */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* Inner shadow for depth */
+    height: 60px; /* Match the grid row height */
+    width: 60px; /* Match the grid column width */
+    margin-bottom: 2rem;
+}
+  
+  /* General style for the pieces */
+  .piece {
+    width: 100%; /* Slightly smaller than the cell */
+    height: 100%; /* Slightly smaller than the cell */
+    border-radius: 50%; /* Circular pieces */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow for the pieces */
+    animation: dropPieceAnimation 1s ease-out;
+  }
+  
+  .player1 {
+    background-color: #ff1a1a; /* Bright red for player 1 */
+  }
+  
+  .player2 {
+    background-color: #ffff1a; /* Bright yellow for player 2 */
+  }
+
+.drop-from-1 { animation: dropPieceAnimation-1 1s ease-out; }
+.drop-from-2 { animation: dropPieceAnimation-2 1s ease-out; }
+.drop-from-3 { animation: dropPieceAnimation-3 1s ease-out; }
+.drop-from-4 { animation: dropPieceAnimation-4 1s ease-out; }
+.drop-from-5 { animation: dropPieceAnimation-5 1s ease-out; }
+
+
+@keyframes dropPieceAnimation-1 {
+    0% { transform: translateY(-92px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes dropPieceAnimation-2 {
+    0% { transform: translateY(-184px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes dropPieceAnimation-3 {
+    0% { transform: translateY(-276px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes dropPieceAnimation-4 {
+    0% { transform: translateY(-368px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes dropPieceAnimation-5 {
+    0% { transform: translateY(-460px); }
+    100% { transform: translateY(0); }
+  }
+
+  

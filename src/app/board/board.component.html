@@ -1,0 +1,28 @@
+<div class="board">
+  <div *ngFor="let col of cols; let colIndex = index" class="">
+    <div
+      *ngFor="let row of rows; let rowIndex = index"
+      class="cell"
+    >
+    <div *ngIf="boardState[rowIndex][colIndex] !== 0"
+    id="piece-{{rowIndex}}-{{colIndex}}"
+    class="piece player{{boardState[rowIndex][colIndex]}}"></div>
+</div>
+  </div>
+</div>
+
+<div class="controls">
+  <input
+    type="text"
+    [(ngModel)]="playerInput"
+    placeholder="Enter CSS (e.g., 'grid-row: 2; grid-column: 3;')"
+  />
+  <button (click)="placePiece()">Place Piece</button>
+</div>
+
+<button *ngIf="showRestartButton" (click)="restartGame()">Restart Game</button>
+
+<div *ngIf="displayFireworks" class="fireworks">
+  <!-- Fireworks animation -->
+</div>
+grid-row:6; grid-column:1
